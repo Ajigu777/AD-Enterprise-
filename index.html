@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AD Enterprise Limited | Professional Brand</title>
+  <meta name="description" content="AD Enterprise: Professional consulting, creative solutions, and real estate services by Damilola Stephen Arise." />
+  <meta name="theme-color" content="#0a1329" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Material Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Configuration -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0a1329",
+            accent: "#C9A24D",
+            secondary: "#1F2933",
+            "background-light": "#f6f6f8",
+            "background-dark": "#13161f",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Utility Font Classes -->
+  <style>
+    .font-serif {
+      font-family: "Playfair Display", serif;
+    }
+    .font-display {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+
+  <!-- Compiled Custom CSS -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body class="bg-white dark:bg-background-dark font-display text-primary transition-colors duration-300">
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="text-accent">
+        </div>
+        <!-- Logo Image -->
+        <a href="index.html">
+          <img src="assets/logo.jpg" alt="Logo" class="h-10 w-auto">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#about">About</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#services">Services</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#partners">Partners</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#works">Works</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#contact">Contact</a>
+        
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="text-primary dark:text-gray-300 focus:outline-none">
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800">
+      <div class="flex flex-col px-6 py-4 gap-4">
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#about">About</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#services">Services</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#partners">Partners</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#works">Works</a>
+        <a class="text-primary dark:text-gray-300 text-sm font-medium hover:text-accent transition-colors" href="#contact">Contact</a>
+        
+      </div>
+    </nav>
+  </header>
+  <main>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center px-6 py-20 overflow-hidden">
+
+  <!-- Background with parallax and opacity -->
+  <div class="absolute inset-0 z-0">
+    <div class="w-full h-full bg-cover bg-center opacity-10 dark:opacity-20 hero-bg"
+         data-alt="Modern minimalist office interior background"
+         style='background-image: url("assets/hero.png");'>
+    </div>
+  </div>
+
+  <!-- Floating shapes (enhanced) -->
+  <div class="absolute top-10 left-10 w-6 h-6 rounded-full bg-accent opacity-40 animate-float-enhanced"></div>
+  <div class="absolute bottom-20 right-20 w-10 h-10 rounded-full bg-accent opacity-30 animate-float-enhanced delay-500"></div>
+  <div class="absolute top-1/2 right-1/3 w-5 h-5 rounded-full bg-accent opacity-25 animate-float-enhanced delay-1000"></div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-4xl text-center space-y-8">
+
+    <!-- Heading -->
+    <h1 class="fade-up gradient-text font-serif text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight">
+      AD Enterprise Limited
+    </h1>
+
+    <!-- Subheading / Tagline -->
+    <p class="fade-up delay-200 text-lg md:text-2xl text-secondary dark:text-gray-400 font-normal tracking-widest uppercase">
+      Consulting • Creativity • Innovation
+    </p>
+
+    <!-- Call-to-Action Button -->
+    <div class="fade-up delay-400 pt-6">
+      <button id="hero-contact-btn"
+              class="bg-accent hover:bg-[#b89140] text-white text-lg font-bold py-4 px-10 rounded-xl transition-all shadow-xl shadow-accent/20 hover:shadow-accent/40 transform active:scale-95 button-hover-glow">
+        Get in Touch
+      </button>
+    </div>
+
+  </div>
+</section>
+    
+    <!-- About Section -->
+<section class="bg-background-light dark:bg-background-dark py-24 px-6" id="about">
+  <div class="max-w-5xl mx-auto space-y-12">
+
+    <!-- AD Enterprise Description -->
+    <div class="text-center space-y-6">
+      <h2 class="font-serif text-3xl md:text-4xl text-primary dark:text-white fade-up">
+        About AD Enterprise Limited
+      </h2>
+      <div class="w-20 h-1 bg-accent mx-auto mb-2 divider-grow fade-up delay-200"></div>
+      <p class="text-secondary dark:text-gray-300 text-lg md:text-xl leading-relaxed fade-up delay-400">
+        AD Enterprise is a multi-disciplinary consultancy at the intersection of 
+        <span class="font-semibold text-accent">strategic planning</span>, 
+        <span class="font-semibold text-accent">creative innovation</span>, and 
+        <span class="font-semibold text-accent">real estate development</span>. 
+        We help brands and individuals unlock their potential through bold strategies, innovation, and meaningful partnerships.
+      </p>
+    </div>
+
+    <!-- Founder Section: Mobile-first big image, desktop stacked -->
+    <div class="flex flex-col items-center md:flex-col gap-8 md:gap-12">
+
+      <!-- Founder Image -->
+      <div class="w-100 h-100 sm:w-80 sm:h-80 md:w-90 md:h-90 lg:w-90 lg:h-90 overflow-hidden rounded-xl shadow-lg fade-up founder-img transform transition-transform duration-500 hover:scale-105">
+        <img 
+          src="assets/about.jpg" 
+          alt="Damilola Stephen Arise, Founder of AD Enterprise" 
+          class="w-full h-full object-cover">
+      </div>
+
+      <!-- Founder Info -->
+      <div class="text-center space-y-4 fade-up delay-200">
+        <h3 class="text-2xl md:text-3xl font-serif text-primary dark:text-white font-semibold">
+          Meet the Founder: Damilola Stephen Arise
+        </h3>
+        <p class="text-secondary dark:text-gray-300 text-lg md:text-xl leading-relaxed">
+          Damilola Stephen Arise is a visionary with a passion for bridging creativity and business strategy. 
+          With years of experience in consulting, project leadership, and real estate development, he leads AD Enterprise’s mission to redefine success for its clients. 
+          His approach combines strategic thinking with innovative solutions to help brands and individuals reach their full potential.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="relative py-24 px-6 max-w-7xl mx-auto" id="services">
+  
+  <!-- Optional floating background shapes -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute w-48 h-48 bg-accent/10 rounded-full top-0 left-10 animate-float-slow"></div>
+    <div class="absolute w-32 h-32 bg-accent/5 rounded-full bottom-10 right-20 animate-float-slow-reverse"></div>
+  </div>
+
+  <!-- Section Heading -->
+  <div class="text-center mb-16">
+    <h2 class="font-serif text-3xl md:text-4xl text-primary dark:text-white mb-4 fade-up">
+      Our Services
+    </h2>
+    <div class="w-20 h-1 bg-accent mx-auto mb-4 divider-grow"></div>
+    <p class="text-secondary dark:text-gray-400 fade-up delay-200">
+      Tailored solutions for the modern landscape
+    </p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Service Card 1 -->
+    <div class="group p-8 bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent/10 mb-6 transition-all group-hover:bg-accent/20">
+        <span class="material-symbols-outlined text-accent text-4xl group-hover:text-accent/90 transition-all">query_stats</span>
+      </div>
+      <h3 class="text-xl font-bold mb-4 dark:text-white">Business &amp; Consulting</h3>
+      <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed">
+        <span class="font-semibold text-accent">Strategic growth planning</span> and <span class="font-semibold text-accent">operational excellence</span> for emerging and established enterprises.
+      </p>
+    </div>
+
+    <!-- Service Card 2 -->
+    <div class="group p-8 bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up delay-100">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent/10 mb-6 transition-all group-hover:bg-accent/20">
+        <span class="material-symbols-outlined text-accent text-4xl group-hover:text-accent/90 transition-all">palette</span>
+      </div>
+      <h3 class="text-xl font-bold mb-4 dark:text-white">Branding &amp; Creative</h3>
+      <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed">
+        <span class="font-semibold text-accent">Identity design</span> and <span class="font-semibold text-accent">creative direction</span> that resonates with your core audience and values.
+      </p>
+    </div>
+
+    <!-- Service Card 3 -->
+    <div class="group p-8 bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up delay-200">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent/10 mb-6 transition-all group-hover:bg-accent/20">
+        <span class="material-symbols-outlined text-accent text-4xl group-hover:text-accent/90 transition-all">apartment</span>
+      </div>
+      <h3 class="text-xl font-bold mb-4 dark:text-white">Real Estate</h3>
+      <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed">
+        <span class="font-semibold text-accent">Exclusive property consultation</span> and <span class="font-semibold text-accent">development strategies</span> for high-value portfolios.
+      </p>
+    </div>
+
+    <!-- Service Card 4 -->
+    <div class="group p-8 bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up delay-300">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent/10 mb-6 transition-all group-hover:bg-accent/20">
+        <span class="material-symbols-outlined text-accent text-4xl group-hover:text-accent/90 transition-all">restaurant</span>
+      </div>
+      <h3 class="text-xl font-bold mb-4 dark:text-white">Events &amp; Catering</h3>
+      <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed">
+        <span class="font-semibold text-accent">Bespoke culinary experiences</span> and <span class="font-semibold text-accent">flawlessly executed events</span>.
+      </p>
+    </div>
+
+    <!-- Service Card 5 -->
+    <div class="group p-8 bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up delay-400">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent/10 mb-6 transition-all group-hover:bg-accent/20">
+        <span class="material-symbols-outlined text-accent text-4xl group-hover:text-accent/90 transition-all">devices</span>
+      </div>
+      <h3 class="text-xl font-bold mb-4 dark:text-white">Digital Solutions</h3>
+      <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed">
+        <span class="font-semibold text-accent">Cutting-edge digital tools</span> to streamline your modern business workflow.
+      </p>
+    </div>
+
+    <!-- Service Card 6 -->
+    <div class="group p-8 bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up delay-500">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full bg-accent/10 mb-6 transition-all group-hover:bg-accent/20">
+        <span class="material-symbols-outlined text-accent text-4xl group-hover:text-accent/90 transition-all">handshake</span>
+      </div>
+      <h3 class="text-xl font-bold mb-4 dark:text-white">Strategic Alliances</h3>
+      <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed">
+        <span class="font-semibold text-accent">Connecting brands</span> with key industry leaders to foster sustainable mutual growth.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- People We Partner With -->
+<section class="relative bg-gray-50 dark:bg-background-dark/50 py-24 px-6" id="partners">
+  <div class="max-w-5xl mx-auto relative">
+
+    <!-- Optional floating background shapes -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute w-36 h-36 bg-accent/10 rounded-full top-0 left-10 animate-float-slow"></div>
+      <div class="absolute w-24 h-24 bg-accent/5 rounded-full bottom-10 right-20 animate-float-slow-reverse"></div>
+    </div>
+
+    <!-- Section Heading -->
+    <div class="text-center mb-16">
+      <h2 class="font-serif text-3xl md:text-4xl text-primary dark:text-white fade-up mb-4">
+        People We Partner With
+      </h2>
+      <div class="w-20 h-1 bg-accent mx-auto divider-grow"></div>
+    </div>
+
+    <!-- Partners Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Card 1: Catering & Event Planning -->
+      <div class="group bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 
+                  rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 
+                  transition-all duration-300 fade-up p-8 text-center">
+
+        <!-- Square Image -->
+        <div class="w-56 h-56 md:w-64 md:h-64 mx-auto mb-6 overflow-hidden rounded-xl 
+                    transition-transform group-hover:scale-105">
+          <img 
+            src="assets/portfolio twenty one.jpeg" 
+            alt="Catering & Event Planning" 
+            class="w-full h-full object-cover">
+        </div>
+
+        <h3 class="text-xl font-bold dark:text-white mb-3">
+          Catering & Event Planning
+        </h3>
+
+        <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed px-2">
+          Providing <span class="font-semibold text-accent">bespoke culinary experiences</span> 
+          and <span class="font-semibold text-accent">flawlessly executed high-profile events</span> 
+          for private and corporate clients.
+        </p>
+      </div>
+
+      <!-- Card 2: Web Design -->
+      <div class="group bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 
+                  rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 
+                  transition-all duration-300 fade-up delay-200 p-8 text-center">
+
+        <!-- Square Image -->
+        <div class="w-56 h-56 md:w-64 md:h-64 mx-auto mb-6 overflow-hidden rounded-xl 
+                    transition-transform group-hover:scale-105">
+          <img 
+            src="assets/portfolio dual.jpg" 
+            alt="Web Design Partner" 
+            class="w-full h-full object-cover">
+        </div>
+
+        <h3 class="text-xl font-bold dark:text-white mb-3">
+          Web Design
+        </h3>
+
+        <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed px-2">
+          Crafting <span class="font-semibold text-accent">visually engaging</span> and 
+          <span class="font-semibold text-accent">responsive websites</span> to help businesses 
+          establish a strong digital presence.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Card 3: Construction & Soil Testing -->
+<div class="group bg-white dark:bg-background-dark border border-gray-100 dark:border-gray-800 
+            rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 
+            transition-all duration-300 fade-up delay-400 p-8 text-center">
+
+  <!-- Square Image -->
+  <div class="w-56 h-56 md:w-64 md:h-64 mx-auto mb-6 overflow-hidden rounded-xl 
+              transition-transform group-hover:scale-105">
+    <img 
+      src="assets/portfolio fifteen.jpg" 
+      alt="Construction & Soil Testing" 
+      class="w-full h-full object-cover">
+  </div>
+
+  <h3 class="text-xl font-bold dark:text-white mb-3">
+    Construction & Soil Testing
+  </h3>
+
+  <p class="text-secondary dark:text-gray-400 text-sm leading-relaxed px-2">
+    Offering <span class="font-semibold text-accent">comprehensive construction services</span> 
+    and <span class="font-semibold text-accent">soil testing solutions</span> to ensure structural 
+    integrity and project success.
+  </p>
+</div>
+
+<!-- Portfolio Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto" id="works">
+
+  <!-- Section Heading -->
+  <div class="text-center mb-12">
+    <h2 class="font-serif text-3xl md:text-4xl text-primary dark:text-white mb-2">
+      Featured Works
+    </h2>
+    <p class="text-secondary dark:text-gray-400">
+      A curation of excellence and impact
+    </p>
+  </div>
+
+  <!-- Category Filters -->
+  <div class="flex justify-center flex-wrap gap-3 md:gap-4 mb-12">
+    <button class="category-btn px-5 py-2 rounded-full bg-accent text-white font-semibold active" data-category="all">
+      All
+    </button>
+    <button class="category-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-primary dark:text-white font-semibold" data-category="real-estate">
+      Real Estate
+    </button>
+    <button class="category-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-primary dark:text-white font-semibold" data-category="branding">
+      Branding
+    </button>
+    <button class="category-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-primary dark:text-white font-semibold" data-category="project-management">
+      Project Management
+    </button>
+  </div>
+
+  <!-- Portfolio Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 portfolio-grid">
+
+    <!-- Portfolio Item -->
+    <div class="portfolio-item branding relative aspect-square overflow-hidden group fade-up" data-category="branding">
+      <img src="assets/portfolio one.jpg" alt="KD Diaries"
+           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                  flex flex-col items-center justify-center p-4 text-white text-center">
+        <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">
+          Branding
+        </p>
+        <h4 class="text-lg font-serif">KD Diaries</h4>
+      </div>
+    </div>
+
+    <!-- Portfolio Item -->
+    <div class="portfolio-item branding relative aspect-square overflow-hidden group fade-up" data-category="branding">
+      <img src="assets/portfolio two.jpg" alt="VickyWright Drilling Services"
+           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                  flex flex-col items-center justify-center p-4 text-white text-center">
+        <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">
+          Branding
+        </p>
+        <h4 class="text-lg font-serif">VickyWright Drilling</h4>
+      </div>
+    </div>
+
+    <!-- Portfolio Item -->
+    <div class="portfolio-item branding relative aspect-square overflow-hidden group fade-up" data-category="branding">
+      <img src="assets/portfolio three.jpg" alt="VickyWright Project"
+           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                  flex flex-col items-center justify-center p-4 text-white text-center">
+        <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">
+          Branding
+        </p>
+        <h4 class="text-lg font-serif">VickyWright Project</h4>
+      </div>
+    </div>
+
+    <!-- Portfolio Item -->
+    <div class="portfolio-item branding relative aspect-square overflow-hidden group fade-up" data-category="branding">
+      <img src="assets/portfolio four.jpg" alt="145 Kitchen"
+           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                  flex flex-col items-center justify-center p-4 text-white text-center">
+        <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">
+          Branding
+        </p>
+        <h4 class="text-lg font-serif">145 Kitchen</h4>
+      </div>
+    </div>
+    
+    <!-- Portfolio Item 5 -->
+<div class="portfolio-item real-estate relative aspect-square overflow-hidden group fade-up" data-category="real-estate">
+  <img src="assets/portfolio five.jpg" alt="Real Estate One"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Branding</p>
+    <h4 class="text-lg font-serif">Real Estate</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 6 -->
+<div class="portfolio-item real-estate relative aspect-square overflow-hidden group fade-up" data-category="real-estate">
+  <img src="assets/portfolio six.jpg" alt="Luxury Property Listing"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Real Estate</p>
+    <h4 class="text-lg font-serif">Luxury Property Listing</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 7 -->
+<div class="portfolio-item real-estate relative aspect-square overflow-hidden group fade-up" data-category="real-estate">
+  <img src="assets/portfolio seven.jpg" alt="Move-in ready Modern apartment"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Web Design</p>
+    <h4 class="text-lg font-serif">Move-in ready Modern apartment</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 8 -->
+<div class="portfolio-item real-estate relative aspect-square overflow-hidden group fade-up" data-category="real-estate">
+  <img src="assets/portfolio eight.jpg" alt="Recently Renovated Spacious Duplex"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">real-estate</p>
+    <h4 class="text-lg font-serif">Recently Renovated Spacious Duplex</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 9 -->
+<div class="portfolio-item real-estate relative aspect-square overflow-hidden group fade-up" data-category="real-estate">
+  <img src="assets/portfolio nine.jpg" alt="Modern Renovated Apartment"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">real-estate</p>
+    <h4 class="text-lg font-serif">Modern Renovated Apartment</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 10 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio twelve.jpg" alt="Borehole Drilling"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project-Management</p>
+    <h4 class="text-lg font-serif">Borehole Drilling</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 11 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio thirteen.jpg" alt="Construction Mode "
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project-Management</p>
+    <h4 class="text-lg font-serif">Construction Mode </h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 12 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio fourteen.jpg" alt="Site Monitoring"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project-Management</p>
+    <h4 class="text-lg font-serif">Site Monitoring</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 13 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio fifteen.jpg" alt="Workers on Site"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project-Management</p>
+    <h4 class="text-lg font-serif">Workers on Site</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 14 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio seventeen.jpg" alt="Construction Oversight"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project Management</p>
+    <h4 class="text-lg font-serif">Construction Oversight</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 15 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio eighteen.jpg" alt="Site Work"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project-Management</p>
+    <h4 class="text-lg font-serif">Site Work</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 16 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio nineten.jpg" alt="Drilling"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project-Management</p>
+    <h4 class="text-lg font-serif">Drilling</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 17 -->
+<div class="portfolio-item project-management relative aspect-square overflow-hidden group fade-up" data-category="project-management">
+  <img src="assets/portfolio twenty.jpg" alt="Engineers At Work"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Project-Management</p>
+    <h4 class="text-lg font-serif">Engineers At Work</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 18 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio twenty one.jpeg" alt="Nigerian Stew"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering and Event Planning</p>
+    <h4 class="text-lg font-serif">A Pot Of Stew</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 19 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio twenty two.jpeg" alt="Buffet-style meal"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering and Event Planning</p>
+    <h4 class="text-lg font-serif">Buffet-style meal</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 20 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio twenty three.jpg" alt="Birthday packages"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering and Event Planning</p>
+    <h4 class="text-lg font-serif">Birthday packages</h4>
+  </div>
+</div>
+
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio twenty four.jpg" alt="Birthday packages"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering and Event Planning</p>
+    <h4 class="text-lg font-serif">Birthday packages</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio twenty six.jpeg" alt="Jollof rice"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering and Event Planning</p>
+    <h4 class="text-lg font-serif">Jollof Rice</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio twenty seven.jpeg" alt="Jollof rice"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering and Event Planning</p>
+    <h4 class="text-lg font-serif">Jollof Rice</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio twenty eight.jpeg" alt="Egusi Soup"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering and Event Planning</p>
+    <h4 class="text-lg font-serif">Egusi Soup</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item web design relative aspect-square overflow-hidden group fade-up" data-category="web design">
+  <img src="assets/portfolio twenty nine.png" alt="finance website"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Web Design</p>
+    <h4 class="text-lg font-serif">A financial web application UI</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item web design relative aspect-square overflow-hidden group fade-up" data-category="web design">
+  <img src="assets/portfolio thirty.png" alt="An Agro-vet User interface"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Web Design</p>
+    <h4 class="text-lg font-serif"> Agro vet website</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item web design relative aspect-square overflow-hidden group fade-up" data-category="web design">
+  <img src="assets/portfolio thirty one.png" alt="real estate website"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Web Design</p>
+    <h4 class="text-lg font-serif">Real Estate website</h4>
+  </div>
+</div>
+
+<!-- Portfolio Item 21 -->
+<div class="portfolio-item catering relative aspect-square overflow-hidden group fade-up" data-category="catering and event planning">
+  <img src="assets/portfolio thirty two.jpg" alt="Goodies packages"
+       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">Catering And Event Planning</p>
+    <h4 class="text-lg font-serif">Goodies packages</h4>
+  </div>
+</div>
+
+    <!-- Portfolio Item (Video) -->
+<div class="portfolio-item web-design relative aspect-square overflow-hidden group fade-up" data-category="web-design">
+  
+  <!-- Video -->
+  <video 
+    src="assets/portfolio-video.mp4" 
+    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    autoplay 
+    muted 
+    loop 
+    playsinline>
+  </video>
+  
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              flex flex-col items-center justify-center p-4 text-white text-center">
+    <p class="text-accent font-bold uppercase tracking-widest text-xs mb-1">
+      Web Design
+    </p>
+    <h4 class="text-lg font-serif">145 Kitchen Video</h4>
+  </div>
+
+</div>
+
+  
+    
+  </div>
+</section>
+<!-- Why Work With Us Section -->
+<section class="bg-primary text-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <div class="text-center mb-16">
+      <h2 class="font-serif text-3xl md:text-4xl mb-4">Why Work With Us</h2>
+      <p class="text-gray-400">The pillars of our professional philosophy</p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+      
+      <!-- Feature 1 -->
+      <div class="why-item fade-up delay-0 p-6 rounded-xl bg-primary/80 hover:bg-primary/90 transition-all shadow-lg">
+        <span class="material-symbols-outlined text-accent text-5xl mb-6 hover:scale-110 transition-transform" aria-label="Experience Icon">verified</span>
+        <h4 class="text-xl font-bold mb-3">Experience</h4>
+        <p class="text-gray-400 text-sm">Decades of combined expertise across diverse industries.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="why-item fade-up delay-100 p-6 rounded-xl bg-primary/80 hover:bg-primary/90 transition-all shadow-lg">
+        <span class="material-symbols-outlined text-accent text-5xl mb-6 hover:scale-110 transition-transform" aria-label="Versatility Icon">layers</span>
+        <h4 class="text-xl font-bold mb-3">Versatility</h4>
+        <p class="text-gray-400 text-sm">Adaptive strategies that span creative and corporate sectors.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="why-item fade-up delay-200 p-6 rounded-xl bg-primary/80 hover:bg-primary/90 transition-all shadow-lg">
+        <span class="material-symbols-outlined text-accent text-5xl mb-6 hover:scale-110 transition-transform" aria-label="Partnerships Icon">groups</span>
+        <h4 class="text-xl font-bold mb-3">Partnerships</h4>
+        <p class="text-gray-400 text-sm">Access to a robust network of industry leading professionals.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="why-item fade-up delay-300 p-6 rounded-xl bg-primary/80 hover:bg-primary/90 transition-all shadow-lg">
+        <span class="material-symbols-outlined text-accent text-5xl mb-6 hover:scale-110 transition-transform" aria-label="Innovation Icon">auto_awesome</span>
+        <h4 class="text-xl font-bold mb-3">Innovation</h4>
+        <p class="text-gray-400 text-sm">Pioneering methods that keep you ahead of the global curve.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  </main>
+  
+<!-- Contact Section -->
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="contact">
+  <div class="max-w-4xl mx-auto space-y-16">
+
+    <!-- Section Heading -->
+    <div class="text-center fade-up">
+      <h2 class="font-serif text-3xl md:text-4xl text-primary dark:text-white mb-2">
+        Get in Touch
+      </h2>
+      <p class="text-secondary dark:text-gray-400">
+        Reach out to us for inquiries, collaborations, or project proposals
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="fade-up p-8 bg-white dark:bg-secondary rounded-xl shadow-lg">
+      <form class="flex flex-col gap-6">
+
+        <div class="flex flex-col md:flex-row gap-6">
+          <input type="text" placeholder="Your Name" required
+                 class="flex-1 p-4 rounded-lg border border-gray-300 dark:border-gray-700 
+                        bg-gray-50 dark:bg-background-dark text-primary dark:text-white
+                        focus:outline-none focus:ring-2 focus:ring-accent transition">
+
+          <input type="email" placeholder="Email Address" required
+                 class="flex-1 p-4 rounded-lg border border-gray-300 dark:border-gray-700 
+                        bg-gray-50 dark:bg-background-dark text-primary dark:text-white
+                        focus:outline-none focus:ring-2 focus:ring-accent transition">
+        </div>
+
+        <input type="text" placeholder="Subject" required
+               class="p-4 rounded-lg border border-gray-300 dark:border-gray-700 
+                      bg-gray-50 dark:bg-background-dark text-primary dark:text-white
+                      focus:outline-none focus:ring-2 focus:ring-accent transition">
+
+        <textarea placeholder="Your Message" rows="6" required
+                  class="p-4 rounded-lg border border-gray-300 dark:border-gray-700 
+                         bg-gray-50 dark:bg-background-dark text-primary dark:text-white
+                         focus:outline-none focus:ring-2 focus:ring-accent transition"></textarea>
+
+        <!-- SEND BUTTON -->
+        <button type="submit" id="contactWhatsappBtn"
+                class="bg-accent hover:bg-[#b89140] text-white font-bold py-4 px-8 
+                       rounded-xl transition-all shadow-xl shadow-accent/20 
+                       hover:shadow-accent/40 transform active:scale-95">
+          Send Message via WhatsApp
+        </button>
+
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="fade-up p-6 flex flex-col items-center text-center space-y-6">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-accent font-bold mb-2">
+          Contact Info
+        </p>
+        <p class="text-primary dark:text-white font-medium">
+          adenterpriseltd001@gmail.com
+        </p>
+        <p class="text-primary dark:text-white font-medium">
+          +2348134630976, +2349134798561
+        </p>
+      </div>
+
+      <div>
+        <p class="text-xs uppercase tracking-widest text-accent font-bold mb-2">
+          Location
+        </p>
+        <p class="text-primary dark:text-white font-medium">
+          Lagos
+        </p>
+      </div>
+
+      <div class="pt-12 text-xs text-secondary dark:text-gray-500 font-medium">
+        © 2026 AD Enterprise. All rights reserved. Built for excellence.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- WhatsApp Floating Button -->
+  <a id="whatsappBtn" href="#" target="_blank" class="fixed right-6 bottom-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg z-50 transition-colors">
+    <span class="material-symbols-outlined text-white text-3xl">chat</span>
+  </a>
+</footer>
+
+<!-- External Scripts -->
+<script src="script.js"></script>
+</body>
+</html>
