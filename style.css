@@ -1,0 +1,369 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  background-color: #fff;
+  color: #181611;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+button, a.button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, a.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* ==========================
+   HERO / COVER
+========================== */
+.hero-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slide .bg-black\/50 {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Slow Zoom Background */
+.hero-bg {
+  animation: slowZoom 25s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* ==========================
+   CARDS
+========================== */
+.profile-card, .portfolio-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid #e5e5e5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover, .portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Group hover effects */
+.group:hover .group-hover\:shadow-2xl {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   FADE-UP ANIMATIONS
+========================== */
+.animate-fadeUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-fadeUp.delay-100 { transition-delay: 0.1s; }
+.animate-fadeUp.delay-200 { transition-delay: 0.2s; }
+.animate-fadeUp.delay-300 { transition-delay: 0.3s; }
+.animate-fadeUp.delay-400 { transition-delay: 0.4s; }
+.animate-fadeUp.delay-500 { transition-delay: 0.5s; }
+
+.fadeUp-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================
+   PARTNERS GRID
+========================== */
+#partners img {
+  max-height: 56px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#partners img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ==========================
+   TESTIMONIALS CAROUSEL
+========================== */
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #C9A24D;
+}
+
+/* ==========================
+   MOBILE MENU
+========================== */
+#mobile-menu[data-open="true"] {
+  display: block !important;
+}
+
+/* ==========================
+   PRINT / PDF
+========================== */
+@media print {
+  button {
+    display: none !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+/* ==========================
+   HERO / BUTTON ANIMATIONS
+========================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+/* ==========================
+   PREMIUM NAVBAR
+========================== */
+
+/* Header Base */
+#mainHeader {
+  background: transparent;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+#mainHeader.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo Smooth Resize */
+#logo {
+  transition: transform 0.4s ease;
+}
+
+#mainHeader.scrolled #logo {
+  transform: scale(0.9);
+}
+
+/* ==========================
+   DESKTOP NAV LINKS
+========================== */
+
+.nav-link {
+  position: relative;
+  padding-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+/* Animated underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==========================
+   MEGA MENU
+========================== */
+
+.mega-link {
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.mega-link:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* ==========================
+   CTA BUTTON (Premium Style)
+========================== */
+
+.nav-cta {
+  background: #000;
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================
+   MOBILE MENU PREMIUM
+========================== */
+
+#mobile-menu {
+  background: #ffffff;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+}
+
+.mobile-link {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-link:hover {
+  opacity: 0.6;
+  transform: translateX(4px);
+}
+
+/* Mobile CTA */
+.mobile-cta {
+  background: #000;
+  color: #fff;
+  border-radius: 999px;
+  padding: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mobile-cta:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   DROPDOWN SMOOTH FADE
+========================== */
+
+.group:hover .dropdown-panel {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+}
+
+.dropdown-panel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+/* ==========================
+   NAV ACTIVE LINK (Investor Detail)
+========================== */
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ==========================
+   WHATSAPP FLOAT PREMIUM
+========================== */
+
+#whatsappBtn {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#whatsappBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================
+   SMOOTH SECTION OFFSET FIX
+========================== */
+
+section {
+  scroll-margin-top: 120px;
+}

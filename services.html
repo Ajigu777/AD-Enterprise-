@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AD Enterprise | Services</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#C9A24D',
+            'accent-grey': '#E5E5E5',
+            'background-light': '#FFFFFF',
+            'text-dark': '#181611',
+          },
+          fontFamily: {
+            display: ['"Public Sans"', 'sans-serif'],
+            serif: ['Merriweather', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-background-light font-display text-text-dark">
+
+ <!-- ================= PREMIUM HEADER ================= -->
+<header id="mainHeader"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-white/90 backdrop-blur-sm">
+
+  <div id="headerInner" class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.jpg"
+             id="logo"
+             class="w-11 h-11 object-contain transition-all duration-500"
+             alt="AD Enterprise Logo">
+        <span class="text-lg font-semibold tracking-wide">
+          AD Enterprise
+        </span>
+      </a>
+
+      <!-- ================= DESKTOP NAV ================= -->
+      <nav class="hidden lg:flex items-center gap-10 text-sm font-medium">
+
+        <!-- Simple Links -->
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- Services Mega Menu -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1">
+            Services
+            <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:rotate-180">
+              expand_more
+            </span>
+          </button>
+
+          <!-- Dropdown with solid background for clarity -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[520px]
+                      bg-white border border-gray-200 shadow-2xl rounded-2xl p-6
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-300 z-50">
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <a href="#strategy" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Business Strategy</a>
+              <a href="#execution" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Project Execution</a>
+              <a href="#digital" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Digital Solutions</a>
+              <a href="#consulting" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Consulting Services</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+
+        <!-- CTA -->
+        <a href="https://wa.me/2348134630976?text=Hello%20I%20would%20like%20to%20book%20a%20consultation"
+           target="_blank"
+           class="ml-4 px-6 py-2 bg-black text-white rounded-full text-sm font-semibold
+                  hover:scale-105 active:scale-95 transition-all duration-300 shadow-md">
+          Book Consultation
+        </a>
+
+      </nav>
+
+      <!-- ================= MOBILE TOGGLE ================= -->
+      <button id="mobile-menu-btn" class="lg:hidden text-3xl">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <nav id="mobile-menu"
+       class="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl transform -translate-x-full
+              transition-transform duration-500 z-50">
+
+    <!-- Mobile Header -->
+    <div class="flex justify-between items-center p-6 border-b bg-gray-50">
+      <span class="font-semibold text-lg">Menu</span>
+      <button id="mobile-menu-close">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+
+    <!-- Mobile Links -->
+    <ul class="flex flex-col p-6 gap-6 text-base font-medium bg-white">
+      <li><a href="index.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">Home</a></li>
+      <li><a href="about.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">About</a></li>
+      <li><a href="services.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">Services</a></li>
+      <li><a href="portfolio.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">Portfolio</a></li>
+
+      <!-- Mobile CTA -->
+      <li class="pt-6">
+        <a href="https://wa.me/2348134630976?text=Hello%20I%20would%20like%20to%20book%20a%20consultation"
+           target="_blank"
+           class="block text-center py-3 rounded-full bg-black text-white font-semibold
+                  hover:scale-105 transition-all duration-300">
+          Book Consultation
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+</header>
+<!-- ================= HERO ================= -->
+<section class="relative h-[90vh] md:h-[80vh] lg:h-[90vh] overflow-hidden" id="heroSection">
+  <div id="heroSlider" class="absolute inset-0">
+
+    <!-- Slide 1: Architecture -->
+    <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 bg-cover bg-center active"
+      style="background-image:url('assets/service\ one.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70"></div>
+      <div class="relative z-10 h-full flex items-center justify-center px-6">
+        <div class="text-center max-w-4xl text-white space-y-6">
+          
+          <span class="inline-block px-5 py-2 text-xs font-bold tracking-widest uppercase rounded-full bg-primary/30 text-primary border border-primary/50 animate-bounce">
+            Architecture
+          </span>
+          
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-light drop-shadow-lg">
+            Visionary <span class="italic text-primary">Design</span>
+          </h1>
+          
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+            We create sustainable, functional, and aesthetic architectural solutions tailored to your goals.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Interior Design -->
+    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center"
+      style="background-image:url('assets/interior.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70"></div>
+      <div class="relative z-10 h-full flex items-center justify-center px-6">
+        <div class="text-center max-w-4xl text-white space-y-6">
+          <span class="inline-block px-5 py-2 text-xs font-bold tracking-widest uppercase rounded-full bg-primary/30 text-primary border border-primary/50 animate-bounce">
+            Interior Design
+          </span>
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-light drop-shadow-lg">
+            Stylish <span class="italic text-primary">Spaces</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+            Functional and aesthetic interior solutions that reflect your brand and operational needs.
+          </p>
+     
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Event Planning -->
+    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center"
+      style="background-image:url('assets/events.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70"></div>
+      <div class="relative z-10 h-full flex items-center justify-center px-6">
+        <div class="text-center max-w-4xl text-white space-y-6">
+          <span class="inline-block px-5 py-2 text-xs font-bold tracking-widest uppercase rounded-full bg-primary/30 text-primary border border-primary/50 animate-bounce">
+            Event Planning
+          </span>
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-light drop-shadow-lg">
+            Memorable <span class="italic text-primary">Experiences</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+            Seamlessly planned events that leave lasting impressions and elevate your brand presence.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Digital Systems -->
+    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center"
+      style="background-image:url('assets/digital.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70"></div>
+      <div class="relative z-10 h-full flex items-center justify-center px-6">
+        <div class="text-center max-w-4xl text-white space-y-6">
+          <span class="inline-block px-5 py-2 text-xs font-bold tracking-widest uppercase rounded-full bg-primary/30 text-primary border border-primary/50 animate-bounce">
+            Digital Systems
+          </span>
+          <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-light drop-shadow-lg">
+            Smarter <span class="italic text-primary">Operations</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+            Transforming workflows with digital platforms, automation, and intelligent systems.
+          </p>
+      
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Navigation Dots -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+      <button class="slider-dot w-4 h-4 rounded-full bg-white/70 hover:bg-primary transition-all" data-index="0"></button>
+      <button class="slider-dot w-4 h-4 rounded-full bg-white/70 hover:bg-primary transition-all" data-index="1"></button>
+      <button class="slider-dot w-4 h-4 rounded-full bg-white/70 hover:bg-primary transition-all" data-index="2"></button>
+      <button class="slider-dot w-4 h-4 rounded-full bg-white/70 hover:bg-primary transition-all" data-index="3"></button>
+    </div>
+
+  </div>
+</section>
+<!-- ================= SERVICES ================= -->
+<section class="py-28 px-6 bg-gradient-to-b from-background-light/95 to-background-light" id="servicesSection">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 animate-fadeUp delay-100">
+      <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-primary/10 text-primary border border-primary/20">
+        What We Do
+      </span>
+      <h2 class="font-serif text-4xl md:text-6xl font-light mb-6 animate-fadeUp delay-200">
+        Integrated <span class="italic text-primary">Capabilities</span><br>
+        Designed for Scale
+      </h2>
+      <p class="text-text-dark/70 text-lg leading-relaxed animate-fadeUp delay-300">
+        Our services guide organizations from strategic clarity through digital enablement to real-world execution.
+      </p>
+    </div>
+
+    <!-- ================= Construction & Architecture ================= -->
+    <div class="mb-20">
+      <h3 class="text-2xl font-bold mb-12 text-center text-primary animate-fadeUp delay-100">Construction & Architectural Services</h3>
+      <div class="grid lg:grid-cols-3 gap-10">
+
+        <!-- Project & Programme Management -->
+        <div class="group relative p-10 rounded-3xl border border-accent-grey bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fadeUp delay-200">
+          <div class="absolute -top-6 left-10 w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-white text-4xl">engineering</span>
+          </div>
+          <h4 class="mt-8 text-2xl font-bold mb-4">Project & Programme Management</h4>
+          <p class="text-text-dark/70 mb-4 leading-relaxed">
+            Delivering projects on time, within budget, and with operational efficiency.
+          </p>
+          <ul class="space-y-2 text-sm font-medium">
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">construction</span>Infrastructure Development</li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">settings</span>Operational Setup & Optimization</li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">security</span>Risk, Quality & Compliance Control</li>
+          </ul>
+          <a href="#contactSection" class="inline-block mt-4 text-sm font-bold text-primary hover:underline">Learn More</a>
+        </div>
+
+        <!-- Architectural Design -->
+        <div class="group relative p-10 rounded-3xl border border-accent-grey bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fadeUp delay-400">
+          <div class="absolute -top-6 left-10 w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-white text-4xl">architecture</span>
+          </div>
+          <h4 class="mt-8 text-2xl font-bold mb-4">Architectural Design</h4>
+          <p class="text-text-dark/70 mb-4 leading-relaxed">
+            Designing innovative, efficient, and sustainable structures tailored to client needs.
+          </p>
+          <ul class="space-y-2 text-sm font-medium">
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">architecture</span>Building Design & Planning</li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">account_balance</span>Structural Consultation & Feasibility</li>
+          </ul>
+          <a href="#contactSection" class="inline-block mt-4 text-sm font-bold text-primary hover:underline">Learn More</a>
+        </div>
+
+        <!-- Interior Design -->
+        <div class="group relative p-10 rounded-3xl border border-accent-grey bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fadeUp delay-600">
+          <div class="absolute -top-6 left-10 w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-white text-4xl">weekend</span>
+          </div>
+          <h4 class="mt-8 text-2xl font-bold mb-4">Interior Design</h4>
+          <p class="text-text-dark/70 mb-4 leading-relaxed">
+            Creating functional and aesthetic interior spaces tailored to your brand and operational needs.
+          </p>
+          <ul class="space-y-2 text-sm font-medium">
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">apartment</span>Commercial & Residential Spaces</li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">brush</span>Space Planning & Aesthetics</li>
+          </ul>
+          <a href="#contactSection" class="inline-block mt-4 text-sm font-bold text-primary hover:underline">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= Digital Systems ================= -->
+    <div class="mb-20">
+      <h3 class="text-2xl font-bold mb-12 text-center text-primary animate-fadeUp delay-800">Digital Systems & Technology</h3>
+      <div class="grid lg:grid-cols-3 gap-10">
+
+        <!-- Web & Digital Platforms -->
+        <div class="group relative p-10 rounded-3xl border border-accent-grey bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fadeUp delay-1000">
+          <div class="absolute -top-6 left-10 w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-white text-4xl">devices</span>
+          </div>
+          <h4 class="mt-8 text-2xl font-bold mb-4">Web & Digital Platforms</h4>
+          <p class="text-text-dark/70 mb-4 leading-relaxed">
+            Implementing digital systems that improve efficiency, visibility, and scalability.
+          </p>
+          <ul class="space-y-2 text-sm font-medium">
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">language</span>Web & App Development</li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">dns</span>Enterprise Software</li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">smart_toy</span>Automation & Workflows</li>
+          </ul>
+          <a href="#contactSection" class="inline-block mt-4 text-sm font-bold text-primary hover:underline">Learn More</a>
+        </div>
+
+        <!-- Data Architecture & Integration -->
+        <div class="group relative p-10 rounded-3xl border border-accent-grey bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fadeUp delay-1200">
+          <div class="absolute -top-6 left-10 w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-white text-4xl">account_tree</span>
+          </div>
+          <h4 class="mt-8 text-2xl font-bold mb-4">Data Architecture & Integration</h4>
+          <p class="text-text-dark/70 mb-4 leading-relaxed">
+            Structuring and integrating data across your enterprise for smarter decision-making.
+          </p>
+          <ul class="space-y-2 text-sm font-medium">
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">storage</span>Data Management</li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">insights</span>Analytics & Reporting</li>
+          </ul>
+          <a href="#contactSection" class="inline-block mt-4 text-sm font-bold text-primary hover:underline">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= Event Planning ================= -->
+    <div>
+      <h3 class="text-2xl font-bold mb-12 text-center text-primary animate-fadeUp delay-1400">Event Planning & Management</h3>
+      <div class="grid lg:grid-cols-3 gap-10">
+
+        <!-- Corporate Events -->
+        <div class="group relative p-10 rounded-3xl border border-accent-grey bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fadeUp delay-1600">
+          <div class="absolute -top-6 left-10 w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-white text-4xl">calendar_month</span>
+          </div>
+          <h4 class="mt-8 text-2xl font-bold mb-4">Corporate Events</h4>
+          <p class="text-text-dark/70 mb-4 leading-relaxed">
+            Planning and executing professional corporate events that leave a lasting impression.
+          </p>
+          <a href="#contactSection" class="inline-block mt-4 text-sm font-bold text-primary hover:underline">Learn More</a>
+        </div>
+
+        <!-- Private Events -->
+        <div class="group relative p-10 rounded-3xl border border-accent-grey bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fadeUp delay-1800">
+          <div class="absolute -top-6 left-10 w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-white text-4xl">celebration</span>
+          </div>
+          <h4 class="mt-8 text-2xl font-bold mb-4">Private & Social Events</h4>
+          <p class="text-text-dark/70 mb-4 leading-relaxed">
+            From weddings to private parties, we design memorable experiences tailored to your vision.
+          </p>
+          <a href="#contactSection" class="inline-block mt-4 text-sm font-bold text-primary hover:underline">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================= CTA ================= -->
+<section class="relative bg-primary py-24 text-white text-center overflow-hidden animate-fadeUp delay-100 px-6">
+  
+  <!-- Background Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 -z-10"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-3xl mx-auto space-y-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold animate-fadeUp delay-200 leading-tight">
+      Ready to <span class="italic text-white/90">Work With Us?</span>
+    </h2>
+
+    <p class="mt-4 text-white/80 text-lg md:text-xl leading-relaxed animate-fadeUp delay-300">
+      Let’s turn strategy into execution and ideas into measurable impact.
+    </p>
+
+    <a 
+        href="#contactSection" 
+        id="bookConsultationLink"
+        class="inline-block mt-8 bg-white text-primary font-bold px-12 py-4 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 animate-fadeUp delay-400"
+    >
+      Book a Consultation
+    </a>
+  </div>
+
+  <!-- Optional Decorative Elements -->
+  <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+  <div class="absolute -top-16 -right-16 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- Logo & About -->
+    <div>
+      <a href="index.html" class="flex items-center gap-3 mb-4">
+        <img src="assets/logo.jpg" alt="AD Enterprise Logo" class="w-10 h-10 object-contain">
+        <span class="font-bold text-white text-lg tracking-wide">AD Enterprise Limited</span>
+      </a>
+      <p class="text-gray-400 text-sm">
+        Delivering strategic, digital, and infrastructure solutions to empower organizations and create measurable impact.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-primary transition">About Us</a></li>
+        <li><a href="services.html" class="hover:text-primary transition">Services</a></li>
+        <li><a href="portfolio.html" class="hover:text-primary transition">Portfolio</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li>Email: <a href="mailto:info@adenterprise.com" class="hover:text-primary transition">info@adenterprise.com</a></li>
+        <li>Phone: <a href="tel:+2349134798561,+2348134630976" class="hover:text-primary transition">+2349134798561,+2348134630976</a></li>
+        <li>Address: 123 Enterprise St, Lagos, Nigeria</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+    © 2026 AD Enterprise. All rights reserved.
+  </div>
+</footer>
+
+<!-- ================= Floating WhatsApp Wrapper ================= -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+
+  <!-- Message Bubble -->
+  <div
+    id="whatsappMessage"
+    class="translate-x-full opacity-0 bg-white text-sm text-gray-800 px-4 py-2 rounded-xl
+           shadow-lg border border-gray-200 transition-all duration-500 ease-in-out
+           pointer-events-none select-none"
+    role="status"
+    aria-live="polite"
+  >
+    Speak to a consultant
+  </div>
+
+  <!-- WhatsApp Button -->
+  <button
+    id="whatsappToggle"
+    class="w-16 h-16 bg-green-500 rounded-full shadow-lg
+           flex items-center justify-center text-white
+           hover:scale-110 active:scale-95 transition-transform duration-200
+           focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+    aria-label="Chat on WhatsApp"
+  >
+    <span class="material-symbols-outlined text-3xl">chat</span>
+  </button>
+
+</div>
+
+<!-- External JS -->
+<script src="script.js" defer></script>
+
+</body>
+</html>

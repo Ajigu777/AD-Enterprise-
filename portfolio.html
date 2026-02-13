@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AD Enterprise - Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#C9A24D',
+            backgroundLight: '#FFFFFF',
+            backgroundDark: '#181611',
+          },
+          fontFamily: {
+            display: ['"Public Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-backgroundLight text-gray-900 font-display">
+
+ <!-- ================= PREMIUM HEADER ================= -->
+<header id="mainHeader"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-white/90 backdrop-blur-sm">
+
+  <div id="headerInner" class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.jpg"
+             id="logo"
+             class="w-11 h-11 object-contain transition-all duration-500"
+             alt="AD Enterprise Logo">
+        <span class="text-lg font-semibold tracking-wide">
+          AD Enterprise
+        </span>
+      </a>
+
+      <!-- ================= DESKTOP NAV ================= -->
+      <nav class="hidden lg:flex items-center gap-10 text-sm font-medium">
+
+        <!-- Simple Links -->
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- Services Mega Menu -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1">
+            Services
+            <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:rotate-180">
+              expand_more
+            </span>
+          </button>
+
+          <!-- Dropdown with solid background for clarity -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[520px]
+                      bg-white border border-gray-200 shadow-2xl rounded-2xl p-6
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-300 z-50">
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <a href="#strategy" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Business Strategy</a>
+              <a href="#execution" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Project Execution</a>
+              <a href="#digital" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Digital Solutions</a>
+              <a href="#consulting" class="mega-link hover:bg-gray-100 rounded px-3 py-2">Consulting Services</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+
+        <!-- CTA -->
+        <a href="https://wa.me/2348134630976?text=Hello%20I%20would%20like%20to%20book%20a%20consultation"
+           target="_blank"
+           class="ml-4 px-6 py-2 bg-black text-white rounded-full text-sm font-semibold
+                  hover:scale-105 active:scale-95 transition-all duration-300 shadow-md">
+          Book Consultation
+        </a>
+
+      </nav>
+
+      <!-- ================= MOBILE TOGGLE ================= -->
+      <button id="mobile-menu-btn" class="lg:hidden text-3xl">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <nav id="mobile-menu"
+       class="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl transform -translate-x-full
+              transition-transform duration-500 z-50">
+
+    <!-- Mobile Header -->
+    <div class="flex justify-between items-center p-6 border-b bg-gray-50">
+      <span class="font-semibold text-lg">Menu</span>
+      <button id="mobile-menu-close">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+
+    <!-- Mobile Links -->
+    <ul class="flex flex-col p-6 gap-6 text-base font-medium bg-white">
+      <li><a href="index.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">Home</a></li>
+      <li><a href="about.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">About</a></li>
+      <li><a href="services.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">Services</a></li>
+      <li><a href="portfolio.html" class="mobile-link hover:bg-gray-100 rounded px-3 py-2">Portfolio</a></li>
+
+      <!-- Mobile CTA -->
+      <li class="pt-6">
+        <a href="https://wa.me/2348134630976?text=Hello%20I%20would%20like%20to%20book%20a%20consultation"
+           target="_blank"
+           class="block text-center py-3 rounded-full bg-black text-white font-semibold
+                  hover:scale-105 transition-all duration-300">
+          Book Consultation
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+</header>
+
+<!-- ================= HERO SLIDER: PORTFOLIO ================= -->
+<section id="portfolio-hero-slider" class="relative w-full min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] overflow-hidden">
+
+  <!-- ================= HERO SLIDER ================= -->
+<div id="heroSlider" class="relative w-full h-[90vh] overflow-hidden">
+
+  <!-- Slide 1 -->
+  <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 bg-cover bg-center"
+       style="background-image:url('assets/slide one.jpg');">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-black animate-fadeUp">
+        Innovative <span class="text-primary">Digital Solutions</span>
+      </h2>
+      <p class="text-lg md:text-xl text-white/90 animate-fadeUp delay-100 max-w-3xl mt-4">
+        Driving measurable impact through technology, automation, and strategic digital systems.
+      </p>
+      <div class="mt-6 animate-fadeUp delay-200 flex gap-4">
+        <a href="#portfolio"
+           class="hero-btn px-6 py-3 bg-primary text-black font-bold rounded-xl shadow-lg hover:scale-105 transition-all">
+          View Projects
+        </a>
+        <a href="#contact"
+           class="hero-btn px-6 py-3 border border-white text-white rounded-xl hover:bg-white/20 transition-all">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center"
+       style="background-image:url('assets/slide two.jpg');">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-black animate-fadeUp">
+        Strategic <span class="text-primary">Brand Transformations</span>
+      </h2>
+      <p class="text-lg md:text-xl text-white/90 animate-fadeUp delay-100 max-w-3xl mt-4">
+        Elevating brands with design, market positioning, and operational excellence.
+      </p>
+      <div class="mt-6 animate-fadeUp delay-200 flex gap-4">
+        <a href="#portfolio" class="hero-btn px-6 py-3 bg-primary text-black font-bold rounded-xl shadow-lg hover:scale-105 transition-all">
+          View Projects
+        </a>
+        <a href="#contact" class="hero-btn px-6 py-3 border border-white text-white rounded-xl hover:bg-white/20 transition-all">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center"
+       style="background-image:url('assets/slide three.jpg');">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-black animate-fadeUp">
+        Infrastructure & <span class="text-primary">Construction Excellence</span>
+      </h2>
+      <p class="text-lg md:text-xl text-white/90 animate-fadeUp delay-100 max-w-3xl mt-4">
+        Delivering impactful physical projects with precision, quality, and strategic oversight.
+      </p>
+      <div class="mt-6 animate-fadeUp delay-200 flex gap-4">
+        <a href="#portfolio" class="hero-btn px-6 py-3 bg-primary text-black font-bold rounded-xl shadow-lg hover:scale-105 transition-all">
+          View Projects
+        </a>
+        <a href="#contact" class="hero-btn px-6 py-3 border border-white text-white rounded-xl hover:bg-white/20 transition-all">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+    <!-- Slider Navigation Dots -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+      <button class="slider-dot w-4 h-4 rounded-full bg-white/70 hover:bg-primary transition-all" data-index="0" aria-label="Slide 1"></button>
+      <button class="slider-dot w-4 h-4 rounded-full bg-white/70 hover:bg-primary transition-all" data-index="1" aria-label="Slide 2"></button>
+      <button class="slider-dot w-4 h-4 rounded-full bg-white/70 hover:bg-primary transition-all" data-index="2" aria-label="Slide 3"></button>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO GRID ================= -->
+<section class="mb-20 px-6" id="portfolioSection">
+
+  <!-- Section Header -->
+  <div class="max-w-7xl mx-auto text-center mb-12 animate-fadeUp">
+    <h2 class="text-4xl font-black mb-3">Our Projects</h2>
+    <div class="w-24 h-1 bg-primary mx-auto rounded-full mb-4"></div>
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      A selection of strategic, digital, and infrastructure initiatives delivered with precision and measurable impact.
+    </p>
+  </div>
+
+  <!-- ================= CATEGORY FILTERS ================= -->
+<div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-4 mb-12 animate-fadeUp">
+  <button class="filter-btn px-6 py-2 bg-primary text-black font-bold rounded-full transition" data-filter="all">All</button>
+  <button class="filter-btn px-6 py-2 bg-gray-200 text-gray-800 font-bold rounded-full transition" data-filter="management">Project Management</button>
+  <button class="filter-btn px-6 py-2 bg-gray-200 text-gray-800 font-bold rounded-full transition" data-filter="architecture">Architectural Construction</button>
+  <button class="filter-btn px-6 py-2 bg-gray-200 text-gray-800 font-bold rounded-full transition" data-filter="event">Event Planning</button>
+  <button class="filter-btn px-6 py-2 bg-gray-200 text-gray-800 font-bold rounded-full transition" data-filter="digital">Digital Systems</button>
+</div>
+
+  <!-- ================= PROJECT GRID ================= -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- ================= PROJECT MANAGEMENT ================= -->
+
+<!-- Project 1 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp"
+     data-category="management">
+
+  <div class="relative">
+    <img src="assets/p1.jpg"
+         class="rounded-t-xl h-[220px] w-full object-cover"
+         alt="Infrastructure Upgrade Oversight Project">
+  </div>
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Infrastructure Upgrade Oversight</h4>
+    <p class="text-sm text-primary font-medium mb-2">Project Management</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Coordinated contractors and stakeholders to deliver infrastructure upgrades on schedule and within approved budget.
+    </p>
+  </div>
+</div>
+
+
+<!-- Project 2 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-100"
+     data-category="management">
+
+  <div class="relative">
+    <img src="assets/p2.jpg"
+         class="rounded-t-xl h-[220px] w-full object-cover"
+         alt="Commercial Development Supervision">
+  </div>
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Commercial Development Supervision</h4>
+    <p class="text-sm text-primary font-medium mb-2">Project Management</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Managed full lifecycle execution of a multi-phase commercial development project.
+    </p>
+  </div>
+</div>
+
+
+<!-- Project 3 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-200"
+     data-category="management">
+
+  <div class="relative">
+    <img src="assets/p3.jpg"
+         class="rounded-t-xl h-[220px] w-full object-cover"
+         alt="Corporate Expansion Rollout">
+  </div>
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Corporate Expansion Rollout</h4>
+    <p class="text-sm text-primary font-medium mb-2">Project Management</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Oversaw expansion strategy execution including budgeting, risk assessment, and performance tracking.
+    </p>
+  </div>
+</div>
+
+
+<!-- Project 4 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-300"
+     data-category="management">
+
+  <div class="relative">
+    <img src="assets/p4.jpg"
+         class="rounded-t-xl h-[220px] w-full object-cover"
+         alt="Strategic Operations Optimization">
+  </div>
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Strategic Operations Optimization</h4>
+    <p class="text-sm text-primary font-medium mb-2">Project Management</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Implemented performance improvement initiatives that increased operational efficiency.
+    </p>
+  </div>
+</div>
+
+
+<!-- Project 5 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-400"
+     data-category="management">
+
+  <div class="relative">
+    <img src="assets/p5.jpg"
+         class="rounded-t-xl h-[220px] w-full object-cover"
+         alt="Large-Scale Project Coordination">
+  </div>
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Large-Scale Project Coordination</h4>
+    <p class="text-sm text-primary font-medium mb-2">Project Management</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Directed cross-functional teams to deliver high-value projects with structured reporting and governance.
+    </p>
+  </div>
+</div>
+
+    <!-- ================= ARCHITECTURAL CONSTRUCTION ================= -->
+
+<!-- arc1 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp"
+     data-category="architecture">
+  <img src="assets/arc1.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Modern Commercial Complex">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Modern Commercial Complex</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Designed and executed a high-performance commercial facility with sustainable materials.
+    </p>
+  </div>
+</div>
+
+<!-- arc2 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-100"
+     data-category="architecture">
+  <img src="assets/arc2.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Luxury Residential Estate">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Luxury Residential Estate</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Developed a modern residential estate blending elegance with structural durability.
+    </p>
+  </div>
+</div>
+
+<!-- arc3 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-200"
+     data-category="architecture">
+  <img src="assets/arc3.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Corporate Office Headquarters">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Corporate Office Headquarters</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Delivered a functional corporate headquarters optimized for collaboration and efficiency.
+    </p>
+  </div>
+</div>
+
+<!-- arc4 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-300"
+     data-category="architecture">
+  <img src="assets/arc4.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Urban Mixed-Use Development">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Urban Mixed-Use Development</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Constructed a mixed-use complex integrating retail, office, and residential spaces.
+    </p>
+  </div>
+</div>
+
+<!-- arc5 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-400"
+     data-category="architecture">
+  <img src="assets/arc5.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Industrial Warehouse Facility">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Industrial Warehouse Facility</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Engineered and constructed a large-scale warehouse for logistics and storage efficiency.
+    </p>
+  </div>
+</div>
+
+<!-- arc6 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc6.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Smart City Residential Block">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Smart City Residential Block</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Built an innovative smart housing block integrating technology and sustainability.
+    </p>
+  </div>
+</div>
+
+<!-- arc7 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc7.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Healthcare Facility Construction">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Healthcare Facility Construction</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Delivered a healthcare facility meeting modern safety and operational standards.
+    </p>
+  </div>
+</div>
+
+<!-- arc8 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc8.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Educational Campus Expansion">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Educational Campus Expansion</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Expanded academic infrastructure to support growing student enrollment.
+    </p>
+  </div>
+</div>
+
+<!-- arc9 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc9.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Retail Shopping Plaza">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Retail Shopping Plaza</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Constructed a retail complex designed for high foot traffic and accessibility.
+    </p>
+  </div>
+</div>
+
+<!-- arc10 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc10.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Sustainable Green Building">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Sustainable Green Building</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Implemented eco-friendly construction techniques for energy-efficient performance.
+    </p>
+  </div>
+</div>
+
+<!-- arc11 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc11.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Government Infrastructure Project">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Government Infrastructure Project</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Executed a major public infrastructure project aligned with regulatory standards.
+    </p>
+  </div>
+</div>
+
+<!-- arc12 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc12.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="High-Rise Apartment Complex">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">High-Rise Apartment Complex</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Constructed a modern high-rise apartment building focused on safety and comfort.
+    </p>
+  </div>
+</div>
+
+<!-- arc13 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
+     data-category="architecture">
+  <img src="assets/arc13.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Transport Terminal Development">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Transport Terminal Development</h4>
+    <p class="text-sm text-primary font-medium mb-2">Architectural Construction</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Developed a large-scale transport terminal enhancing regional connectivity.
+    </p>
+  </div>
+</div>
+
+
+
+    <!-- ================= EVENT PLANNING ================= -->
+
+<!-- even1 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp"
+     data-category="event">
+  <img src="assets/even1.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Corporate Leadership Summit Event">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Corporate Leadership Summit</h4>
+    <p class="text-sm text-primary font-medium mb-2">Event Planning</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Successfully executed a high-level corporate summit hosting over 500 executives and stakeholders.
+    </p>
+  </div>
+</div>
+
+<!-- even2 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-100"
+     data-category="event">
+  <img src="assets/even2.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Annual Business Conference">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Annual Business Conference</h4>
+    <p class="text-sm text-primary font-medium mb-2">Event Planning</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Coordinated a multi-day conference featuring keynote speakers, breakout sessions, and networking events.
+    </p>
+  </div>
+</div>
+
+<!-- even3 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-200"
+     data-category="event">
+  <img src="assets/even3.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Product Launch Event">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Product Launch Experience</h4>
+    <p class="text-sm text-primary font-medium mb-2">Event Planning</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Designed and delivered an immersive product launch event maximizing brand visibility and engagement.
+    </p>
+  </div>
+</div>
+
+<!-- even4 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-300"
+     data-category="event">
+  <img src="assets/even4.jpeg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Executive Networking Gala">
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Executive Networking Gala</h4>
+    <p class="text-sm text-primary font-medium mb-2">Event Planning</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Managed a premium executive gala event delivering seamless logistics and guest experience.
+    </p>
+  </div>
+</div>
+
+<!-- even5 - Video Project -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-400"
+     data-category="event">
+
+  <div class="relative">
+    <video
+      class="event-video rounded-t-xl h-[220px] w-full object-cover"
+      src="assets/even5.mp4"
+      preload="metadata">
+    </video>
+
+    <!-- Play / Pause Button -->
+    <button
+      class="video-toggle absolute inset-0 flex items-center justify-center text-white text-4xl bg-black/40 hover:bg-black/60 transition">
+      ▶
+    </button>
+  </div>
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">Wedding Reception</h4>
+    <p class="text-sm text-primary font-medium mb-2">Event Planning</p>
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Coordinated a large wedding showcasing innovation, Aesthetics and professionalism.
+    </p>
+  </div>
+</div>
+
+<!-- ================= DIGITAL SYSTEMS ================= -->
+
+<!-- dig1 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp"
+     data-category="digital">
+
+  <img src="assets/Loanmate image.png"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="LoanMate financial services web application dashboard">
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">LoanMate Web Application</h4>
+    <p class="text-sm text-primary font-medium mb-2">Digital Systems</p>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+      Developed a responsive financial services platform enabling streamlined loan applications, tracking, and user management.
+    </p>
+
+    <a href="https://loanmart.onrender.com"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-flex items-center gap-2 px-5 py-2 bg-primary text-black font-semibold rounded-lg hover:brightness-110 transition">
+      View Website →
+    </a>
+  </div>
+</div>
+
+<!-- dig2 -->
+<div class="project-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 animate-fadeUp delay-100"
+     data-category="digital">
+
+  <img src="assets/logo.jpg"
+       class="rounded-t-xl h-[220px] w-full object-cover"
+       alt="Ad Enterprise Limited corporate portfolio website">
+
+  <div class="p-6">
+    <h4 class="font-bold text-xl mb-2">AD Enterprise Corporate Portfolio</h4>
+    <p class="text-sm text-primary font-medium mb-2">Digital Systems</p>
+    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+      Designed and deployed a modern corporate portfolio website showcasing services, projects, and company expertise.
+    </p>
+
+    <a href="https://ad-enterprise-limited.vercel.app/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-flex items-center gap-2 px-5 py-2 bg-primary text-black font-semibold rounded-lg hover:brightness-110 transition">
+      View Website →
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+<!-- ================= TESTIMONIALS CAROUSEL ================= -->  
+<section class="relative mb-20 bg-gray-50 py-16 px-6 rounded-3xl shadow-lg" id="testimonialSection">  
+
+  <h3 class="text-3xl font-black text-center mb-12 animate-fadeUp">
+    What Our Clients Say
+  </h3>  
+
+  <!-- Slider Controls -->
+  <button id="prevTestimonial"  
+    class="absolute left-2 top-1/2 -translate-y-1/2 bg-primary p-3 rounded-full text-black shadow-lg hover:bg-primary/90 transition">
+    ‹
+  </button>  
+  <button id="nextTestimonial"  
+    class="absolute right-2 top-1/2 -translate-y-1/2 bg-primary p-3 rounded-full text-black shadow-lg hover:bg-primary/90 transition">
+    ›
+  </button>  
+
+  <!-- Slider Track -->
+  <div class="overflow-hidden relative">
+    <div class="flex transition-transform duration-500 testimonial-track" id="testimonialTrack">
+
+      <!-- Testimonial Card Template -->
+      <div class="min-w-full px-4 animate-fadeUp delay-100">
+        <div class="bg-white/90 p-8 rounded-3xl shadow-2xl border border-gray-100 flex flex-col items-center text-center">
+          <p class="italic text-gray-700 mb-6 leading-relaxed text-lg">
+            “I'm extremely satisfied with the services provided by Ad Enterprise Limited. 
+            Their professionalism, reliability, and attention to detail have made them a trusted partner for my business.”
+          </p>
+          <p class="font-bold text-gray-900 mt-2">
+            Safiyat Ojoma Shaibu — CEO, 145 Kitchens
+          </p>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4 animate-fadeUp delay-200">
+        <div class="bg-white/90 p-8 rounded-3xl shadow-2xl border border-gray-100 flex flex-col items-center text-center">
+          <p class="italic text-gray-700 mb-6 leading-relaxed text-lg">
+            “Ad Enterprise Limited has been a game-changer for my business. Their products and services have helped me streamline my operations and improve efficiency.”
+          </p>
+          <p class="font-bold text-gray-900 mt-2">
+            Mr. Idris Isah — Khaddys' Yo Dairies
+          </p>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4 animate-fadeUp delay-300">
+        <div class="bg-white/90 p-8 rounded-3xl shadow-2xl border border-gray-100 flex flex-col items-center text-center">
+          <p class="italic text-gray-700 mb-6 leading-relaxed text-lg">
+            “Ad Enterprise Limited is a standout company that truly cares about its customers. Their services exceeded my expectations.”
+          </p>
+          <p class="font-bold text-gray-900 mt-2">
+            Victories Foodies — Festac
+          </p>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4 animate-fadeUp delay-400">
+        <div class="bg-white/90 p-8 rounded-3xl shadow-2xl border border-gray-100 flex flex-col items-center text-center">
+          <p class="italic text-gray-700 mb-6 leading-relaxed text-lg">
+            “I've worked with several companies in the industry, but Ad Enterprise Limited stands out for its exceptional service and commitment to excellence.”
+          </p>
+          <p class="font-bold text-gray-900 mt-2">
+            Mr. Ebenezer Akinrinde Oluwapelumi
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Slider Dots -->
+  <div class="flex justify-center gap-3 mt-8">
+    <span class="testimonial-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-primary transition" data-index="0"></span>
+    <span class="testimonial-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-primary transition" data-index="1"></span>
+    <span class="testimonial-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-primary transition" data-index="2"></span>
+    <span class="testimonial-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-primary transition" data-index="3"></span>
+  </div>
+
+</section>
+
+<!-- ================= PARTNERS SECTION ================= -->
+<section id="partners" class="py-20 px-6 md:px-20 bg-background-light">
+
+  <!-- Section Heading -->
+  <div class="max-w-7xl mx-auto text-center mb-14 animate-fadeUp">
+    <h4 class="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
+      Our Partners
+    </h4>
+    <h2 class="text-3xl md:text-4xl font-black text-charcoal">
+      Trusted by Amazing Brands
+    </h2>
+    <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+      We collaborate with forward-thinking brands and businesses to deliver
+      impactful solutions and long-term value.
+    </p>
+  </div>
+
+  <!-- Partners Grid -->
+  <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center">
+
+    <!-- Partner 1 -->
+    <div class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeUp delay-100">
+      <img src="assets/partner one.jpg" alt="Au Tech Logo" class="h-14 max-h-16 object-contain">
+      <p class="text-sm font-medium text-gray-600" aria-label="Au technologies">Au technologies</p>
+    </div>
+
+    <!-- Partner 2 -->
+    <div class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeUp delay-200">
+      <img src="assets/partner two.jpg" alt="Oma Cusines Logo" class="h-14 max-h-16 object-contain">
+      <p class="text-sm font-medium text-gray-600" aria-label="Oma cusines">Oma cusines</p>
+    </div>
+
+    <!-- Partner 3 -->
+    <div class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeUp delay-300">
+      <img src="assets/partner three.jpg" alt="Kafecodes Logo" class="h-14 max-h-16 object-contain">
+      <p class="text-sm font-medium text-gray-600" aria-label="Kafecodes">Kafecodes</p>
+    </div>
+
+    <!-- Partner 4 -->
+    <div class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeUp delay-400">
+      <img src="assets/Partner Four.jpg" alt="Imprints Logo" class="h-14 max-h-16 object-contain">
+      <p class="text-sm font-medium text-gray-600" aria-label="Imprints">Imprints</p>
+    </div>
+
+    <!-- Partner 5 -->
+    <div class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeUp delay-500">
+      <img src="assets/partner five.jpg" alt="Vickywright Drilling Logo" class="h-14 max-h-16 object-contain">
+      <p class="text-sm font-medium text-gray-600" aria-label="Vickywright Drilling">Vickywright Drilling</p>
+    </div>
+
+     <!-- Partner 6 -->
+    <div class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeUp delay-500">
+      <img src="assets/partner six.jpg" alt="De Royals event" class="h-14 max-h-16 object-contain">
+      <p class="text-sm font-medium text-gray-600" aria-label="De Royals Event">De Royals Event</p>
+    </div>
+
+     <!-- Partner 7 -->
+    <div class="flex flex-col items-center gap-3 grayscale hover:grayscale-0 hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeUp delay-500">
+      <img src="assets/partner seven.jpg" alt="His Royal Highness Engineering" class="h-14 max-h-16 object-contain">
+      <p class="text-sm font-medium text-gray-600" aria-label="His Royal Highness Engineering">His Royal Highness Engineering</p>
+    </div>
+
+
+  </div>
+</section>
+<!-- ================= CTA ================= -->
+<section class="text-center py-20 animate-fadeUp delay-100 bg-background-light" id="ctaSection">
+  <h3 class="text-3xl md:text-4xl font-black mb-4">
+    Ready to Build With Us?
+  </h3>
+  <p class="text-gray-700 mb-8">
+    Let’s transform your vision into measurable impact.
+  </p>
+  <button 
+      id="contactExpertsBtn"
+      class="bg-black text-white px-10 py-4 rounded-lg font-bold shadow-lg hover:scale-105 hover:bg-primary transition-all duration-300"
+  >
+      Contact Our Experts
+  </button>
+</section>
+</main>
+
+<footer class="bg-gray-900/95 text-gray-300 py-20">
+  <div class="max-w-7xl mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- Logo & About -->
+    <div>
+      <a href="index.html" class="flex items-center gap-3 mb-4">
+        <img src="assets/logo.jpg" alt="AD Enterprise Logo" class="w-10 h-10 object-contain">
+        <span class="font-bold text-white text-lg tracking-wide">AD Enterprise Limited</span>
+      </a>
+      <p class="text-gray-400 text-sm">
+        Delivering strategic, digital, and infrastructure solutions to empower organizations and create measurable impact.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="index.html" class="hover:text-primary/80 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-primary/80 transition">About Us</a></li>
+        <li><a href="services.html" class="hover:text-primary/80 transition">Services</a></li>
+        <li><a href="portfolio.html" class="hover:text-primary/80 transition">Portfolio</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li>Email: <a href="mailto:info@adenterprise.com" class="hover:text-primary/80 transition">info@adenterprise.com</a></li>
+        <li>Phone: <a href="tel:+2349134798561,+2348134630976" class="hover:text-primary/80 transition">+2349134798561,+2348134630976</a></li>
+        <li>Address: 123 Enterprise St, Lagos, Nigeria</li>
+      </ul>
+    </div>
+
+    
+
+  <!-- Footer Bottom -->
+  <div class="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+    © 2026 AD Enterprise. All rights reserved.
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  <!-- Message Bubble -->
+  <div
+    id="whatsappMessage"
+    class="translate-x-full opacity-0 bg-white text-sm text-gray-800 px-4 py-2 rounded-xl
+           shadow-lg border border-gray-200 transition-all duration-300 ease-in-out
+           pointer-events-none select-none"
+    role="status"
+    aria-live="polite"
+  >
+    Speak to a consultant
+  </div>
+
+  <!-- WhatsApp Button -->
+  <button
+    id="whatsappToggle"
+    class="w-16 h-16 bg-green-500 rounded-full shadow-lg
+           flex items-center justify-center text-white
+           hover:scale-110 hover:animate-pulse active:scale-95
+           transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+    aria-label="Chat on WhatsApp"
+  >
+    <span class="material-symbols-outlined text-3xl">chat</span>
+  </button>
+</div>
+<!-- External JS -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
